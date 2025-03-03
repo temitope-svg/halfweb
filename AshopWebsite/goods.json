@@ -1,0 +1,137 @@
+[
+    { 
+        "id":0,
+        "name":"consecteure,adipisci",
+        "price":995,
+        "price2":1195,
+        "img":"images/goodsimg/goods1.jpg",
+        "categories": ["industrial","fashion", "Electronics", "Livingroom", "Furniture", "bathroom", "Bedroom","objects"],
+        "brands": ["Armani","Burberry","Chanels","Fendi","Hermes","Prada","Lauren"]
+    },
+    { 
+        "id":1,
+        "name":"consecteure,adipisci",
+        "price":995,
+        "price2":1195,
+        "img":"images/goodsimg/goods2.jpg",
+        "categories": ["industrial","fashion", "Electronics", "Livingroom", "Furniture", "bathroom", "Bedroom","objects"],
+        "brands": ["Armani","Prada","Lauren"]
+
+    },
+    { 
+        "id":2,
+        "name":"consecteure,adipisci",
+        "price":995,
+        "price2":1195,
+        "img":"images/goodsimg/goods3.jpg",
+        "categories": ["Character"],
+        "brands": ["Armani","Burberry","Chanels","Fendi","Hermes","Prada","Lauren"]
+    },
+    { 
+        "id":3,
+        "name":"consecteure,adipisci",
+        "price":25,
+        "price2":1195,
+        "img":"images/goodsimg/goods4.jpg",
+        "categories": ["Character"],
+        "brands": ["Lauren"]
+    },
+    { 
+        "id":4,
+        "name":"consecteure,adipisci",
+        "price":499,
+        "img":"images/goodsimg/goods5.jpg",
+        "categories": ["Architecture"],
+        "brands": ["Armani","Burberry","Fendi","Hermes","Prada","Lauren"]
+    },
+    { 
+        "id":5,
+        "name":"consecteure,adipisci",
+        "price":25,
+        "price2":119,
+        "img":"images/goodsimg/goods6.jpg",
+        "categories": ["industrial","Architecture", "Livingroom", "Furniture"],
+        "brands": ["Chanels","Lauren"]
+    },
+    { 
+        "id":6,
+        "name":"Et harumm,quidem",
+        "price":995,
+        "price2":1195,
+        "img":"images/goodsimg/goods7.jpg",
+        "categories": ["objects", "Livingroom", "Furniture"],
+        "brands": ["Armani","Chanels","Fendi","Hermes","Prada"]
+    },
+    { 
+        "id":7,
+        "name":"Et harumm,quidem",
+        "price":995,
+        "price2":1195,
+        "img":"images/goodsimg/goods8.jpg",
+        "categories": ["Character"],
+        "brands": ["Armani","Burberry","Chanels","Fendi","Hermes","Prada","Lauren"]
+    },
+    { 
+        "id":8,
+        "name":"Et harumm,quidem",
+        "price":11,
+        "price2":119,
+        "img":"images/goodsimg/goods9.jpg",
+        "categories": ["Architecture"],
+        "brands": ["Armani","Burberry","Chanels","Fendi","Hermes","Prada","Lauren"]
+    },
+    { 
+        "id":9,
+        "name":"maxime placeat facere",
+        "price":995,
+        "price2":1195,
+        "img":"images/goodsimg/goods10.jpg",
+        "categories": ["industrial","fashion", "Electronics", "Livingroom", "bathroom", "Bedroom", "objects"],
+        "brands" :[]
+    },
+    { 
+        "id":10,
+        "name":"maxime placeat facere",
+        "price":995,
+        "price2":1195,
+        "img":"images/goodsimg/goods11.jpg",
+        "categories": ["Character"],
+        "brands": ["Armani","Burberry","Chanels","Fendi","Hermes","Prada","Lauren"]
+    },
+    { 
+        "id":11,
+        "name":"maxime placeat facere",
+        "price":15,
+        "price2":25,
+        "img":"images/goodsimg/goods12.jpg",
+        "categories": ["Architecture"],
+        "brands": ["Armani","Burberry","Chanels","Fendi","Hermes","Prada","Lauren"]
+    },
+    { 
+        "id":12,
+        "name":"Nam libero tempor cum",
+        "price":995,
+        "price2":1195,
+        "img":"images/goodsimg/goods13.jpg",
+        "categories": ["industrial","fashion", "Electronics", "Livingroom", "bathroom", "Bedroom", "Furniture", "objects"],
+        "brands": ["Armani","Burberry","Chanels","Fendi","Hermes","Prada","Lauren"]
+    },
+    { 
+        "id":13,
+        "name":"Nam libero tempor cum",
+        "price":995,
+        "price2":1195,
+        "img":"images/goodsimg/goods14.jpg",
+        "categories": ["Character"],
+        "brands": ["Armani","Burberry","Chanels","Fendi","Hermes","Prada","Lauren"]
+    },
+    { 
+        "id":14,
+        "name":"Nam libero tempor cum",
+        "price":995,
+        "price2":1195,
+        "img":"images/goodsimg/goods15.jpg",
+        "categories": ["Character","fashion","Architecture"],
+        "brands": ["Armani","Burberry","Chanels","Fendi","Hermes","Prada","Lauren"]
+    }   
+]
