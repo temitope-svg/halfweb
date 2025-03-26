@@ -14,6 +14,7 @@ body{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 7vh;
 }
 .topLeft{
     display: flex;
@@ -35,25 +36,26 @@ body{
 .showbar h3{
     background-color: blue;
     padding: .8em;
-    color: #fff;
     border-radius: .7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 100%;
-    word-wrap: break-word;
-    height: 7vh;
+    height: 6vh;
+    width: 100%;
 }
 .showbar h3 a{
+    height: 100%;
+    width: 100%;
     text-decoration: none;
     color: #fff;
     font-size: 1.3em;
-    /* margin-top: -1em; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    word-wrap: break-word;
+    font-weight:600;
 }
 .showbar h3 .material-symbols-outlined{
-    margin-right: .3em;
-    font-size: 1.3em;
-    /* margin-top: .3em; */
+    margin-right: .1em;
+    font-size: 1.5em;
 }
 .showbar:hover .dropdown{
     display:block ;
@@ -71,7 +73,6 @@ body{
     align-items: center;
     justify-content: space-between;
     width: 10em ;
-    /* background-color: red; */
     margin: .3em 2em;
     padding: .5em;
     border-bottom: .1em solid black ;
@@ -113,7 +114,9 @@ body{
 .topRight{
     display: flex;
     width: 50%;
-    /* background-color: red; */
+    align-items: center;
+    justify-content: flex-end;
+    padding: .5em;
 }
 .search{
     display: flex;
@@ -123,12 +126,13 @@ body{
     margin-right: 1.2em;
 }
 .search input{
-    height: 2.7rem;
+    height: 3rem;
     width: 100%;
     border: 0;
     background-color: #c9d0e7;
-    padding: 0 1.3em 0 1em;
+    padding: 0 1.3em;
     font-size: 1em;
+    border-radius: .7em;
 }
 input:focus{
     outline: none;
@@ -141,7 +145,8 @@ input:focus{
 }
 .float_search{
     position: absolute;
-    right: 0;
+    right: 3%;
+    top: 10%;
 }
 .login{
     display: flex;
@@ -166,26 +171,161 @@ input:focus{
     font-size: 1.5em;
 }
 .cart{
-  margin-left: 1em; 
-  border-left: 1px solid rgba(0,0,0,0.3); 
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.cart span{
+    margin-left: 1em; 
+    border-left: 1px solid rgba(0,0,0,0.3); 
+    display: flex;
+    align-items: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  .cart span{
     padding-left: .6em;
     font-size: 180%;
     color: rgba(0,0,0,0.5);
-}
-.count{
+  }
+  .hoverContain{
+   position: absolute;
+   background-color: #fff;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+   width: 25rem;
+   top: 99%;
+   right: -1.2em;
+   border-radius: .58em;
+   display: none;
+  }
+  .hoverTop{
+    display: none;
+  }
+  .cart:hover .hoverContain{
+    display:block ;
+  }
+  .emptyCart{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em 0;
+    display: none;
+  }
+  .emptyCart h1{
+    font-size: 2em;
+    font-weight: 300;
+  }
+  .emptyCart h2{
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+  .emptyCartActive{
+    display: flex;
+  }
+  .count{
     background-color: red;
     color: #fff;
-    padding: .3em;
+    padding: .45em .5em;
     font-size: .6em;
     border-radius: 50%;
     position: absolute;
     right: 0;
     bottom: 20%;
+  }
+  .loadCart{
+    padding: 2em 1em;
+    width: 100%;
+    display: none;
+  }
+  .loadCartActive{
+    display: block;
+  }
+  .lCTop{
+    width: 100%;
+    display: flex;
+    margin: 1em 0;
+}
+.lctopRight img{
+    height: 11vh;
+    margin-right: 1.2em;
+    border-radius: .8em;
+}
+.lctopLeft h3{
+    font-size: 1.3em;
+    font-weight: 300;
+}
+.lctopLeft h4{
+    margin-top: .5em;
+}
+.lctopLeft h4 span{
+    font-size: 1.3em;
+    padding: 0;
+    color: #000;
+    font-weight: 600;   
+}
+.lctopLeft h4 span:nth-child(2){
+    padding-right: 1em;
+}
+.lctopLeft h4 span:nth-child(4){
+    padding-right: .5em;
+}
+.lctLast{
+    margin-left: auto;
+}
+.lctLast button{
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3vh;
+    width: 3em;
+    background-color: transparent;
+    font-size: .8em;
+}
+.cartTotal{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-top:  1px solid rgba(0,0,0,0.3);
+    padding: 1em 0;
+}
+.cartTotal h2{
+    font-size: 1.2em;
+    font-weight: 400;
+}
+.cartTotal div span{
+    font-size: 1.2em;
+    padding: 0;
+    color: #000;
+    font-weight: 500;
+}
+.lctLow{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.lctLow button{
+    width: 49%;
+    height: 6.5vh;
+    border-radius: .8em;
+}
+.lctLow button a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+.lctLow button:nth-child(1) a{
+    color: #000;
+}
+.lctLow button:nth-child(1){
+    background-color: transparent;
+}
+.lctLow button:nth-child(2){
+    background-color: #0000ff;
+    border: 0;
+    color: #fff;
 }
 .sec_bar{
     display: flex;
@@ -414,7 +554,8 @@ input:focus{
 }
 .fea_goods a img{
     width: 95%;
-    height: 12em;
+    height: 29vh;
+    border-radius: 1em;
 }
 .fea_goods a h3{
     font-size: 1em;
@@ -731,35 +872,247 @@ input:focus{
     right: 2%;
     top: 12%;
 }
-@media ( max-width:766px){
-    .topbar{
-        margin: 2rem 0;
+
+
+@media (max-width:1024px){
+   .login{
+     border: none;
+     width: 0;
+     border-left: 1px solid rgba(0,0,0,0.2);
+     border-radius: 0;
+   } 
+   .login-Text{
+      display: none;
     }
-    .topLeft{
-        width: 70%;
-    }
-    .topRight{
-        width: 30%;
-    }
-    .topImage{
-        width: 30%;
-    }
-    .showbar{
-        margin-left: 1em;
+    .search{
+        width: 0;
+        margin-right: 2em;
     }
     .search input{
         display: none;
     }
-    .login{
-        border: 0;
-        width: 10%;
-        border-left: 1px solid rgba(0,0,0,0.3);
-        border-radius: 0;
+    .float_search{
+        position: relative;
     }
-    .login span:nth-child(1){
+    .sec_bar{
+        flex-direction: column;
+    }
+    .sec_sub{
+        width: 100%;
+    }
+    .sec_right{
+        width: 97%;
+        display:flex ;
+        flex-direction: row;
+        margin-top: 2em;
+        justify-content: space-between;
+    }
+    .rightsub{
+        width: 32.5%;
+        margin: 0;
+        margin-left: -2%;
+        height: 38vh;
+    }
+    .fea_goods{
+        width: 30%;
+    }
+    .fea_goods:nth-child(4){
+       display: none;
+    }
+    .fea_goods:nth-child(5){
         display: none;
     }
-    .login span:nth-child(2){
-        margin-bottom: -.5em;
+    .seventh{
+      flex-wrap: wrap;
+      gap: 2em;
     }
+    .seventhbar{
+        width: 45%;
+    }
+    .last{
+        flex-wrap: wrap;
+        gap: 4em; 
+        height: 100%;
+    }
+    .lastbarChild{
+        width: 45%;
+    }
+}
+
+
+@media (max-width:650px){
+   .topbar{
+     width: 100%;
+     height: 5vh;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+   }
+   .topLeft{
+     width: 50%;
+   }
+   .topImage{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+   }
+   .topImage img{
+    width: 100%;
+   }
+   .showbar h3{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .showbar h3 span:nth-child(2){
+    display: none;
+   }
+   .second_drop{
+    right: 100%;
+    left: auto;
+    width: 60%;
+   }
+   .search{
+     background-color: none;
+   }
+   .hoverContain{
+    position: fixed;
+    width: 90vw; 
+    top: 0;
+    left: 0;
+    height: 100vh;
+   }
+   .hoverTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 1em -1.5em 1em;
+   }
+   .hoverTop div{
+    font-size: 1.3em;
+   }
+   .hoverTop span{
+    font-size: 1.6em;
+    transition: transform 1s ease-in-out;
+    transform-origin: center bottom;
+   }
+   .login{
+    border: none;
+   }
+   .login-Text{
+    display: none;
+   }
+   .sub2{
+    flex-direction: column;
+   }
+   .sec2_goods1{
+    width: 100%;
+   }
+   .sec2_goods2{
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: -2em;
+   }
+   .sub3{
+    flex-direction: column;
+   }
+   .sec3_goods{
+    width: 100%;
+    margin-top: 2em;
+   }
+   .goods1_float3{
+    right: 0;
+   }
+   .sec_right{
+    flex-direction: column;
+   }
+   .rightsub{
+    width: 100%;
+    margin-top:2em ;
+   }
+   .rightsub:nth-child(1){
+    margin-top: 0;
+   }
+   .sec3_details{
+    left: auto;
+    right: 15%;
+   }
+   .goods1_float6{
+    right: 0;
+    position: absolute;
+   }
+   .rightsub_details{
+    left: auto;
+    right: 5%;
+   }
+   .thd_top{
+    flex-direction: column;
+   }
+   .dir_bar{
+    margin-top: 1em;
+   }
+   .featured_goods{
+    justify-content: center;
+   }
+   .fea_goods{
+    width: 90%;
+    max-width: 300px;
+   }
+   .fea_goods:nth-child(3){
+    display: none;
+   }
+   .fea_goods:nth-child(2){
+    display: none;
+   }
+   .four{
+    flex-direction: column;
+    height: auto;
+   }
+   .fourleft{
+    width: 100%;
+    height: 35vh;
+   }
+   .fourRight{
+    margin-top: 1.5em;
+    width: 100%;
+    height: 35vh;
+   }
+   .fourimg2{
+    left: 0;
+   }
+   .sixth{
+    flex-direction: column;
+    height: auto;
+   }
+   .sixthleft{
+    width: 100%;
+    height: 35vh;
+    overflow: hidden;
+   }
+   .sixthimg1{
+    top: -10%;
+    left: -10%;
+   }
+   .sixthright{
+    margin-top: 1.5em;
+    width: 100%;
+    height: 40vh;
+   }
+   .seventh{
+    flex-direction: column;
+   }
+   .seventhbar{
+    width: 100%;
+    margin: 1em 0 .5em 10%;
+   }
+   .last{
+    flex-direction: column;
+    padding: 0 10%;
+   }
+   .lastbarChild{
+    width: 100%;
+     margin: 1em 0;
+     padding: 0;
+   }
 }

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="shop.css">
     <link rel="icon" href="images/basket.png">
-    <title>shop</title>
+    <link rel="stylesheet" href="cheakout.css">
+    <title>cheakout</title>
 </head>
 <body>
   <div class="topbar">
@@ -15,7 +15,7 @@
     <div class="topImage">
         <img src="images/market_image1.png">
     </div>
-    <div class="dropShows">
+    <div class="dropbar">
         <div class="showbar">
             <h3>
               <a href="shop.html">
@@ -148,88 +148,101 @@
     </div>
 </div>
 </div>
-  
-  <div class="goodspage">
-    <div class="leftside">
-          <div class="dropbar">
-           <div class="drop_top">
-              <h3>Search Product</h3>
-              <div class="drop_butt">
-                 <span class="material-symbols-outlined close_butt">chevron_right</span>
-                 <span class="material-symbols-outlined open_butt">keyboard_arrow_down</span>
-              </div>
-          </div>  
-          <div class="drop searchdrop">
-            <input type="search" placeholder="search..."  class="in_search">
-            <button class="click_search"><span class="material-symbols-outlined">search</span></button>
-          </div> 
-        </div>
-        <div class="dropbar">
-            <div class="drop_top">
-                <h3>Categories</h3>
-                <div class="drop_butt">
-                  <span class="material-symbols-outlined close_butt">chevron_right</span>
-                  <span class="material-symbols-outlined open_butt">keyboard_arrow_down</span>
-               </div>
-              </div> 
-              <div class="drop categodrp"></div>
-        </div>
-        <div class="dropbar">
-            <div class="drop_top">
-                <h3>Brands</h3>
-                <div class="drop_butt">
-                  <span class="material-symbols-outlined close_butt">chevron_right</span>
-                  <span class="material-symbols-outlined open_butt">keyboard_arrow_down</span>
-               </div>
-              </div>  
-              <div class="drop branddrp"></div>
-        </div>
-        <div class="dropbar">
-            <div class="drop_top">
-                <h3>Price Range</h3>
-                <div class="drop_butt">
-                  <span class="material-symbols-outlined close_butt">chevron_right</span>
-                  <span class="material-symbols-outlined open_butt">keyboard_arrow_down</span>
-               </div>
-              </div> 
-              <div class="drop dprice">
-                    <h2><span class="rangeValue">10</span>$</h2>
-                    <input type="range" min="11" max="995" value="51" class="rangeInput" >
-                    <button class="rangeClick">Fliter</button>
-              </div> 
-        </div>
+  <div class="mainPage">
+    <div class="headMove">
+      <a href="index.html">Home</a>
+      <span class="material-symbols-outlined">arrow_forward_ios</span>
+      <a href="cheakout.html">Checkout</a>
     </div>
-    <div class="rightside">
-        <div class="righttop">
-            <h2>Featured Goods</h2>
-            <div class="select">
-                <h3 class="optionDrop">Sort By: <span class="op_view">Default</span> <span class="material-symbols-outlined selectarrow">keyboard_arrow_down</span></h3>
-                <div class="options">
-                   <div class="option">
-                       <p class="optionName">Default</p>
-                       <input type="checkbox"></div>
-                   <div class="option">
-                       <p class="optionName">Popularity</p> 
-                       <input type="checkbox"></div>
-                   <div class="option">
-                       <p class="optionName">Rating</p>
-                       <input type="checkbox"></div>
-                   <div class="option">
-                       <p class="optionName">Newness</p>
-                       <input type="checkbox"></div>
-                   <div class="option">
-                       <p class="optionName">Low Price</p>
-                       <input type="checkbox"></div>
-                   <div class="option">
-                       <p class="optionName">High Price</p>
-                       <input type="checkbox"></div>
+    <h3 class="headchec">Checkout</h3>
+    <div class="twinCut">
+        <div class="leftCut">
+            <h3>Billing details</h3>
+            <form action="">
+                <label for="">First name <span class="hash">*</span></label>
+                <input type="text">
+                <label for="">Last name <span class="hash">*</span></label>
+                <input type="text">
+                <label for="">Company name(optional) <span class="hash">*</span></label>
+                <input type="text">
+                <label for="country">Country / Region <span class="hash">*</span></label>
+                <select id="country"><option value="">Select Country</option></select>
+                <label for="">Street address<span class="hash">*</span></label>
+                <input type="text">
+                <input type="text">
+                <label for="">Postalcode/ zip<span class="hash">*</span></label>
+                <input type="text">
+                <label for="">Town/City<span class="hash">*</span></label>
+                <input type="text">
+                <label for="">Phone<span class="hash">*</span></label>
+                <input type="number">
+                <label for="">Email address<span class="hash">*</span></label>
+                <input type="email">
+                <h4>Additional information</h4>
+                <label for="">Order notes (optional)</label>
+                <textarea rows="10"></textarea>
+            </form>
+        </div>
+        <div class="rightCut">
+            <h3>Your Order</h3>
+            <div class="tableTop">
+                <p>PRODUCT</p>
+                <p>SUBTOTAL</p>
+            </div>
+            <div class="productTable">
+                <div class="tablet">
+                    <div class="tabletLeft">
+                        <img src="/images/goodsimg/goods1.jpg" alt="goods1">
+                    </div>
+                    <div class="tabletMid">
+                        <h4>Et harum quidern <span> x </span> <span>3</span></h4>
+                        <p>Selected Brand <span> : </span><span>Armani</span></p>
+                        <p>Selected Color <span> : </span><span>Dark Green</span></p>
+                        <p>Selected Size <span> : </span><span>M</span></p>
+                    </div>
+                    <div class="tableRight">
+                        <p><span>$</span><span>3000</span></p>
+                    </div>
+                </div>
+                <div class="tablet">
+                    <div class="tabletLeft">
+                        <img src="/images/goodsimg/goods2.jpg" alt="goods2">
+                    </div>
+                    <div class="tabletMid">
+                        <h4>Et harum quidern <span> x </span> <span>3</span></h4>
+                        <p>Selected Brand <span> : </span><span>Armani</span></p>
+                        <p>Selected Color <span> : </span><span>Dark Green</span></p>
+                        <p>Selected Size <span> : </span><span>M</span></p>
+                    </div>
+                    <div class="tableRight">
+                        <p><span>$</span><span>5000</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="subTotal">
+                <p>SUBTOTAL</p>
+                <p><span>$</span><span class="tableSubtotal">6965</span></p>
+            </div>
+            <div class="Total">
+                <p>TOTAL</p>
+                <p><span>$</span><span class="tableTotal">6965</span></p>
+            </div>
+            <div class="lastTable">
+                <div class="lastTableTop">
+                    <p>
+                        Sorry, it seems that there are no available payment methods. Please contact us if you require assistance or wish to make alternate arrangements.
+                    </p>
+                </div>
+                <div class="tableLow">
+                    <p>PLACEORDER</p>
                 </div>
             </div>
         </div>
-        <div class="goodsContainer"></div>
-        </div>
     </div>
-  </div>
+
+</div>
+
+
 
 
   <div class="seventh">
@@ -263,7 +276,7 @@
     </div>
  </div>
  <div class="last">
-   <div class="lastbar1 lastbarChild">
+   <div class="lastbar1 lastbar4">
      <div class="lastbarimg">
        <img src="images/lastlow.png" alt="">
      </div>
@@ -277,19 +290,19 @@
        <i class="fa-brands fa-twitter"></i>
      </div>
    </div>
-   <div class="lastbar2 lastbarChild">
+   <div class="lastbar2 lastbar4">
        <h3>Quick Links</h3>
        <h2><a href="index.html">Home</a></h2>
        <h2><a href="shop.html">Shop</a></h2>
    </div>
-   <div class="lastbar3 lastbarChild">
+   <div class="lastbar3 lastbar4">
        <h2>Contact</h2>
        <h3>+99 (0) 101 0000 888</h3>
        <p>
          Patricia C. Amedee 4401 Waldeck Street Grapevine Nashville, Tx 76051
        </p>
    </div>
-   <div class="lastbar4 lastbarChild">
+   <div class="lastbar4 lastbar4">
      <h3>Subscribe To Our Email</h3>
      <h2>For Latest News & Updates</h2>
      <div class="mail_input">
@@ -298,7 +311,7 @@
      </div>
    </div>
  </div>
-     <script src="firstscript.js"></script>
-     <script src="script.js"></script>
+
+    <script src="cheakout.js"></script>
 </body>
 </html>

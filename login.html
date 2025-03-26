@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="shop.css">
     <link rel="icon" href="images/basket.png">
-    <title>shop</title>
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
 </head>
 <body>
   <div class="topbar">
@@ -15,7 +15,7 @@
     <div class="topImage">
         <img src="images/market_image1.png">
     </div>
-    <div class="dropShows">
+    <div class="dropbar">
         <div class="showbar">
             <h3>
               <a href="shop.html">
@@ -148,90 +148,37 @@
     </div>
 </div>
 </div>
-  
-  <div class="goodspage">
-    <div class="leftside">
-          <div class="dropbar">
-           <div class="drop_top">
-              <h3>Search Product</h3>
-              <div class="drop_butt">
-                 <span class="material-symbols-outlined close_butt">chevron_right</span>
-                 <span class="material-symbols-outlined open_butt">keyboard_arrow_down</span>
-              </div>
-          </div>  
-          <div class="drop searchdrop">
-            <input type="search" placeholder="search..."  class="in_search">
-            <button class="click_search"><span class="material-symbols-outlined">search</span></button>
-          </div> 
-        </div>
-        <div class="dropbar">
-            <div class="drop_top">
-                <h3>Categories</h3>
-                <div class="drop_butt">
-                  <span class="material-symbols-outlined close_butt">chevron_right</span>
-                  <span class="material-symbols-outlined open_butt">keyboard_arrow_down</span>
-               </div>
-              </div> 
-              <div class="drop categodrp"></div>
-        </div>
-        <div class="dropbar">
-            <div class="drop_top">
-                <h3>Brands</h3>
-                <div class="drop_butt">
-                  <span class="material-symbols-outlined close_butt">chevron_right</span>
-                  <span class="material-symbols-outlined open_butt">keyboard_arrow_down</span>
-               </div>
-              </div>  
-              <div class="drop branddrp"></div>
-        </div>
-        <div class="dropbar">
-            <div class="drop_top">
-                <h3>Price Range</h3>
-                <div class="drop_butt">
-                  <span class="material-symbols-outlined close_butt">chevron_right</span>
-                  <span class="material-symbols-outlined open_butt">keyboard_arrow_down</span>
-               </div>
-              </div> 
-              <div class="drop dprice">
-                    <h2><span class="rangeValue">10</span>$</h2>
-                    <input type="range" min="11" max="995" value="51" class="rangeInput" >
-                    <button class="rangeClick">Fliter</button>
-              </div> 
-        </div>
-    </div>
-    <div class="rightside">
-        <div class="righttop">
-            <h2>Featured Goods</h2>
-            <div class="select">
-                <h3 class="optionDrop">Sort By: <span class="op_view">Default</span> <span class="material-symbols-outlined selectarrow">keyboard_arrow_down</span></h3>
-                <div class="options">
-                   <div class="option">
-                       <p class="optionName">Default</p>
-                       <input type="checkbox"></div>
-                   <div class="option">
-                       <p class="optionName">Popularity</p> 
-                       <input type="checkbox"></div>
-                   <div class="option">
-                       <p class="optionName">Rating</p>
-                       <input type="checkbox"></div>
-                   <div class="option">
-                       <p class="optionName">Newness</p>
-                       <input type="checkbox"></div>
-                   <div class="option">
-                       <p class="optionName">Low Price</p>
-                       <input type="checkbox"></div>
-                   <div class="option">
-                       <p class="optionName">High Price</p>
-                       <input type="checkbox"></div>
-                </div>
-            </div>
-        </div>
-        <div class="goodsContainer"></div>
-        </div>
-    </div>
+  <div class="headMove">
+    <a href="index.html">Home</a>
+    <span class="material-symbols-outlined">arrow_forward_ios</span>
+    <a href="#">My account</a>
   </div>
-
-
+   
+  <h3 class="topHead">My account</h3>
+ <div class="form">
+    <h4>Login</h4>
+    <form action="" id="loginForm" >
+       <div class="inputGroup">
+            <label for="email">Username or email address <span>*</span></label>
+            <input type="text" id="email"  required>
+            <small class="error-message"></small>
+       </div>
+       <div class="inputGroup">
+            <label for="password">Password <span>*</span></label>
+            <div class="password-wrapper">
+              <input type="password" id="password" required>
+              <small class="error-message"></small>
+              <span class="toggle-password">👁</span>
+            </div>
+       </div>
+       <div class="remCheck">
+            <input type="checkbox" id="remeber">
+            <label for="remeber">Remember me</label>
+       </div>
+       <button type="submit" class="submit">Login</button>
+            <p class="forgetLink"><a href="">Lost your password</a></p>
+      </form>
+  </div>
   <div class="seventh">
     <div class="seventhbar">
       <span class="material-symbols-outlined">delivery_truck_speed</span>
@@ -298,7 +245,64 @@
      </div>
    </div>
  </div>
-     <script src="firstscript.js"></script>
-     <script src="script.js"></script>
+
+    <script src="cheakout.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("loginForm");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const togglePassword = document.querySelector(".toggle-password");
+
+    togglePassword.addEventListener("click", () => {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            togglePassword.textContent = "🙈";
+        } else {
+            passwordInput.type = "password";
+            togglePassword.textContent = "👁";
+        }
+    });
+
+    form.addEventListener("submit", (event) => {
+        let valid = true;
+
+        if (!emailInput.value.includes("@")) {
+            showError(emailInput, "Enter a valid email address");
+            valid = false;
+        } else {
+            removeError(emailInput);
+        }
+
+        if (passwordInput.value.length < 6) {
+            showError(passwordInput, "Password must be at least 6 characters");
+            valid = false;
+        } else {
+            removeError(passwordInput);
+        }
+
+        if (!valid) {
+            event.preventDefault(); 
+        }
+    });
+
+    function showError(input, message) {
+        const errorMessage = input.nextElementSibling;
+        errorMessage.textContent = message;
+    }
+
+    function removeError(input) {
+        const errorMessage = input.nextElementSibling;
+        errorMessage.textContent = "";
+    }
+});
+
+const hoverContain = document.querySelector('.hoverContain');
+const cartShow = document.querySelector('.cartShow');
+const closeHover = document.querySelector('.closeHover');
+
+cartShow. addEventListener('click',()=> hoverContain.style.display = "block");
+closeHover.addEventListener('click',()=> hoverContain.style.display = "none");
+    </script>
 </body>
 </html>

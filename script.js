@@ -39,8 +39,6 @@ for (let i = 0; i < optionName.length ; i++) {
     })
 }
 
-
-
 const displayProducts = (goods) => {
     let goodsContainer = document.querySelector('.goodsContainer');
     goodsContainer.innerHTML = ''; 
@@ -153,9 +151,95 @@ const setupRange = (goods) =>{
     let filteredGoods = goods.filter(good => parseFloat(good.price) <= maxPrice);
     displayProducts(filteredGoods);
 });
-
 }
-const initialize = async () => {
+
+
+const emptyCart = document.querySelector('.emptyCart');
+const loadCart = document.querySelector('.loadCart');
+const totalCartElement = document.querySelector('.totalCart');
+const countElement = document.querySelector('.count');
+
+const updateCartDisplay = () => {
+    try {
+        const cartData = JSON.parse(localStorage.getItem('cart')) || [];
+        const total = cartData.reduce((sum, item) => sum + parseFloat(item.totalPrice), 0).toFixed(2);
+
+        totalCartElement.textContent = total;
+        countElement.textContent = cartData.length;
+
+        emptyCart.classList.toggle("emptyCartActive", cartData.length === 0);
+        loadCart.classList.toggle("loadCartActive", cartData.length > 0);
+    } catch (error) {
+        console.error('Error updating cart display:', error);
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cartContainer = document.querySelector('.subContain');
+    const cartTotal = document.querySelector('.totalCart');
+
+    const renderCart = () => {
+        try {
+            let cartData = JSON.parse(localStorage.getItem('cart')) || [];
+            cartContainer.innerHTML = '';
+
+            if (cartData.length === 0) {
+                cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+                cartTotal.textContent = "0.00";
+                return;
+            }
+
+            let total = 0;
+            cartData.forEach((item, index) => {
+                total += parseFloat(item.totalPrice);
+
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('lCTop');
+                cartItem.innerHTML = `
+                    <div class="lctopRight">
+                        <img src="${item.img}" alt="${item.name}">
+                    </div>
+                    <div class="lctopLeft">
+                        <h3>${item.name}</h3>
+                        <h4>
+                            <span>$</span><span class="price">${item.price}</span>
+                            <span> x ${item.quantity} = </span>
+                            <span>$</span><span class="price2">${item.totalPrice}</span>
+                        </h4>
+                    </div>
+                    <div class="lctLast">
+                        <button class="removeItem" data-index="${index}">
+                            <span class="material-symbols-outlined">close</span>
+                        </button>
+                    </div>
+                `;
+                cartContainer.appendChild(cartItem);
+            });
+
+            cartTotal.textContent = total.toFixed(2);
+            updateCartDisplay();
+        } catch (error) {
+            console.error('Error rendering cart:', error);
+        }
+    };
+
+    cartContainer.addEventListener('click', (event) => {
+        if (event.target.closest('.removeItem')) {
+            let cartData = JSON.parse(localStorage.getItem('cart')) || [];
+            const index = event.target.closest('.removeItem').dataset.index;
+
+            cartData.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cartData));
+
+            renderCart(); 
+        }
+    });
+
+    renderCart();
+});
+
+
+const initializeFuntions = async () => {
     const goods = await fetchProducts();
     displayProducts(goods);
     setupCategories(goods);
@@ -164,4 +248,12 @@ const initialize = async () => {
     setupRange(goods);
 };
 
-initialize();
+initializeFuntions();
+
+const hoverContain = document.querySelector('.hoverContain');
+const cartShow = document.querySelector('.cartShow');
+const closeHover = document.querySelector('.closeHover');
+
+cartShow. addEventListener('click',()=> hoverContain.style.display = "block");
+closeHover.addEventListener('click',()=> hoverContain.style.display = "none");
+

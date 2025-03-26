@@ -31,14 +31,13 @@ body{
 .showbar{
     position: relative;
     white-space: nowrap;
-    margin-left: 1em;
+    margin: -.5em 0 0 2em;
 }
-
 .showbar h3{
     background-color: blue;
     padding: .8em;
     border-radius: .7rem;
-    height: 5.5vh;
+    height: 6vh;
     width: 100%;
 }
 .showbar h3 a{
@@ -49,7 +48,7 @@ body{
     font-size: 1.3em;
     display: flex;
     align-items: center;
-    justify-content: center ;
+    justify-content: center;
     font-size: 1em;
     word-wrap: break-word;
     font-weight:600;
@@ -327,223 +326,119 @@ input:focus{
     background-color: #0000ff;
     border: 0;
     color: #fff;
+} 
+.subContain{
+    max-height: 50vh;
+    overflow: scroll;
 }
-
-
-.goodspage{
-    display: flex;
-    background-color: rgba(0,0,0,0.1);
-    margin: 2% -3%;
-    padding: 2% 3%;
-    border-radius: 2.5em;
+.subContain::-webkit-scrollbar{
+    display: none;
 }
-.leftside{
-    width: 23%;
-    margin-right: 2%;
+.mainPage{
+    background-color: rgba(0,0,0,0.07);
+    width: 120%;
+    margin: 0 -3%;
+    padding: 1% 3%;
 }
-.dropbar{
-   margin-bottom: 2em; 
-   background-color: #fff;
-   padding: 7% 4.5%;
-   padding-bottom: 12%;
-   border-radius: 1em;
-   width: 100%;
-}
-.drop_top{
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: .8em;
-    border-bottom: 1px solid rgba(0,0,0,.3);
-}
-.drop_top h3{
-    font-size: 1.3em;
-    font-weight: 800;
-    color: #000;
-}
-.drop_butt{
+.headMove{
     display: flex;
     align-items: center;
-    width: 10%;
-    position: relative;
+    margin: 3em 0;
 }
-.drop_butt span{
+.headMove a{
+   text-decoration: none;
+   color: #000;
+   font-size: 1.1em;
+}
+.headMove span{
+    font-size: .7em;
+    margin:  0 .5em;
+}
+.headchec{
+  font-size: 2.3em;  
+}
+.topHead{
     font-size: 2.2em;
-    position: absolute;
+    margin-bottom: 1.2em;
+    color: rgba(0,0,0,0.65);
 }
-.open_butt{
-    display: none;
-}
-.drop{
-    padding-top: 1em;
-    width: 100%;
-    margin-top: .5em;
-    display: none;
-}
-.drop.active{
-    display: block;
-}
-.searchdrop{
-    position: relative;
-}
-.searchdrop input{
-    width: 100%;
-    height: 5vh;
-    padding: 0 5%;
-    font-size: 1.2em;
-    border: 0;
-    background-color: rgba(0,0,0,0.1);
-    border-radius: .5em;
-}
-.searchdrop span{
+.form h4{
+    color: rgba(0,0,0,0.5);
     font-size: 2em;
-    background-color: transparent;
-    position: absolute;
-    top: 40%;
-    right: 3%;
+}
+.inputGroup{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 25%;
+    margin: 2em 0 ;
+}
+.inputGroup label{
+    font-size: 1.5em;
+    margin-bottom: .4em;
     font-weight: 600;
+    color: rgba(0,0,0,0.6);
 }
-.categor{
-   display: flex;
-   width: 95%;
-   margin: .6em;
+.inputGroup label span{
+    color: red;
 }
-.categor input{
-    width: 2.5em;
-}
-.categor h4{
+.inputGroup input{
+    height: 7vh;
+    width: 100%;
+    padding: 0 .5em;
     font-size: 1.2em;
-    font-weight: 400;
+    position: relative;
+    outline: none;
+    color: rgba(0,0,0,0.71);
+    border: 1px solid rgba(0,0,0,0.3);
+}
+.toggle-password{
+    position: absolute;
+    font-size: 1.1em;
+    right: 1%;
+    top: 60%;
+}
+.error-message {
+    color: red;
+    font-size: 0.8rem;
+}
+.remCheck{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.remCheck input{
+   height: 1.5em;
+   width: 1.5em;  
+}
+.remCheck label{
+    font-size: 1em;
+    color: rgba(0,0,0,0.7);
     margin-left: .5em;
 }
-.categor p{
-    margin-left: auto;
+.submit{
+   width: 20%;
+   border: 0;
+   height: 6vh; 
+   background-color: transparent;
+   font-size: 1.1em;
+   border-radius: 1em;
 }
-.dprice h2{
-   font-size: 1.1em; 
-   margin-bottom: .5em;
+.submit:hover{
+   background-color: #0000ff;
+   color: #fff;
 }
-.dprice input{
-    display: block;
-    width: 95%;
+.forgetLink{
+    margin-top: 1em;
 }
-.dprice button{
-  width: 95%;
-  height: 5vh;
-  border: 0;
-  margin-top: 2em;
-  background-color: rgba(0,0,0,0.1);
-  border-radius: 1em;
-}
-.dprice button:hover{
-  background-color: rgba(0,0,0,0.35);
-}
-.rightside{
-    background-color: #fff;
-    width: 100%;
-    padding: 1% 2%;
-    border-radius: 1.2em;
-}
-.righttop{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;  
-    border-bottom: 1px solid rgba(0,0,0,0.3); 
-    padding-bottom: 1em;
-}
-.righttop h2{
-    font-size: 1.7em;
-    font-weight: 500;
-}
-.select{
-    position: relative;
-}
-.select h3{
-    color: #fff;
-    background-color: #000;
-    padding: 1em .5em; 
-    height: 7vh; 
-    width: 17vw; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: .5em;
-    font-size: 1.1em;
-    white-space: nowrap;
-}
-.selectarrow{
-    margin-left: auto;
-    font-size: 2em;
-}
-.options{
-    position: absolute;
-    background-color: #fff;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
-    width: 15vw;
-    top: 100%;
-    z-index: 1000;
-    display: none;
-}
-.opBlock{
-    display: block;
-}
-.option{
-    display: flex;
-    margin: .7em .5em;
-}
-.option p{
-    font-size:1.1em ;
-}
-.option input{
-    margin-left: auto;
-    width: 1.4em;
-}
-.goodsContainer{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 2.6%;
-}
-.goodsContainer a{
-    width: 23%;
-    margin-top: 2em;
+.forgetLink a{
     text-decoration: none;
-}
-.goods{
-    width: 100%;
-    color: #000;
-}
-.goods img{
-    width: 95%;
-    border-radius: 1em;
-    height: 28vh;
-}
-.goods h3{
-    font-weight: 400;
-    font-size: 1.2em;
-    margin: .3em 0;
-    color: rgba(0,0,0,0.75);
-}
-.goods h2{
-    font-weight: 600;
-    font-size: 1.1em;
-    margin-bottom: .4em;
-}
-.secondPrice{
     color: rgba(0,0,0,0.5);
-    text-decoration: line-through;
+    
 }
-.goods button{
-    width: 70%;
-    height: 5vh;
-    font-size: 1.05em;
-    color: #fff;
-    border: none;
-    background-color: rgba(0,0,0,0.3);
-    border-radius: .5em;
-}
-.goods:hover button{
-    background-color: #0000ff;
-}
+
+
+
 
 .seventh{
     display: flex;
@@ -665,7 +560,7 @@ input:focus{
     top: 12%;
 }
 
-@media (max-width:1024px) {
+@media (max-width:1024px){
     .login{
         border: none;
         width: 0;
@@ -685,30 +580,27 @@ input:focus{
        .float_search{
            position: relative;
        }
-       .leftside{
-        width: 30%;
+       
+       .inputGroup{
+        width: 40%;
        }
-       .goodsContainer a{
-        width: 48%;
-       }
-       .goods img{
-        height: 35vh;
-       }
-       .seventh{
+       
+       
+    .seventh{
         flex-wrap: wrap;
         gap: 2em;
-      }
-      .seventhbar{
+    }
+    .seventhbar{
           width: 45%;
-      }
-      .last{
+    }
+    .last{
           flex-wrap: wrap;
           gap: 4em; 
           height: 100%;
-      }
-      .lastbarChild{
+    }
+    .lastbarChild{
           width: 45%;
-      }
+    }
 }
 @media (max-width:650px){
     .topbar{
@@ -738,79 +630,11 @@ input:focus{
       .showbar h3 span:nth-child(2){
        display: none;
       }
-      .second_drop{
-       right: 100%;
-       left: auto;
-       width: 60%;
-      }
-      .search{
-        background-color: none;
-      }
-      .hoverContain{
-       position: fixed;
-       width: 90vw; 
-       top: 0;
-       left: 0;
-       height: 100vh;
-      }
-      .hoverTop{
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       margin: 1em 1em -1.5em 1em;
-      }
-      .hoverTop div{
-       font-size: 1.3em;
-      }
-      .hoverTop span{
-       font-size: 1.6em;
-       transition: transform 1s ease-in-out;
-       transform-origin: center bottom;
-      }
-      .hoverTop span:hover{
-       transform: rotate(720deg);
-      }
-      .login{
-       border: none;
-      }
-      .login-Text{
-       display: none;
-      }
-      .goodspage{
-        flex-direction: column-reverse;
-        padding: 7% 8%;
-      }
-      .rightside{
-        padding: 2% 5%;
-      }
-      .righttop{
-        flex-direction: column;
-        margin-top: 1em;
-      }
-      .righttop h2{
-        width: 100%;
-      }
-      .select{
-        width: 100%;
-        margin-top: .7em;
-      } 
-      .select h3{
-        width: 100%;
-      }
-      .options{
-        width: 100%;
-      }
-      .goodsContainer a{
-        width: 100%;
+
+      .inputGroup{
+        width: 92%;
        }
-       .goods img{
-        height: 40vh;
-       }
-       .leftside{
-        width: 100%;
-        margin-top: 3em;
-       }
-       .seventh{
+      .seventh{
         flex-direction: column;
        }
        .seventhbar{
